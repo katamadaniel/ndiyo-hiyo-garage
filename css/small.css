@@ -1,0 +1,115 @@
+@media screen and (max-width: 600px) {
+  .menu a:not(:first-child) {display: none;}
+  .menu a.icon {
+    float: left;
+    font-size: large;
+    display: block;
+  }
+  .menu.responsive {position: relative;}
+  .menu.responsive .icon {
+    position: absolute;
+    left:0;
+    top: 0;
+    }
+    .menu.responsive a {
+      float: none;
+      font-size: medium;
+      display: block;
+      text-align: center;
+      width: 20%;
+    }
+.content{
+    background-color: rgb(43, 43, 43);
+    color: white;
+    width: 100%;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    min-height: 50vh;
+    text-align: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin: auto;    
+}
+  body h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: orange;
+}
+.content h3{
+    font-family: cursive;
+    font-size: 15px;
+    color: orange;
+}
+
+.menu a {
+    font-family: cursive;
+    font-size: 10px;
+    padding: 10px 10px;
+    text-align:center;
+    margin: 5px;
+
+  }
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+  #services{
+    width: 100%;
+  }
+  textarea {
+    width: 90%;
+  }
+  .container {
+    position: relative;
+    width: 90%;
+    height: auto;
+    margin: auto;
+  }
+  div.gallery img {
+    width: 50%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 10px;
+    font-family: cursive;
+    text-align: center;
+  }
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        font-size: 30px;
+        background-color: rgba(199, 199, 199, 0.5);
+      }
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 14px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  ol{
+    width: 100%;
+}
+  /*Loader screen animation*/
+  .wave {
+    width: 3px;
+    height: 30px;
+    background: linear-gradient(45deg, orange, #fff);
+    margin: 5px;
+    animation: wave 1s linear infinite;
+    border-radius: 20px;
+  }
+  #staff img{
+    width: 20%;
+    display:inline;
+    margin: auto;
+  }
+  #staff .card0 img{
+    width: 100%;
+  }
+  .graphics {
+     width: 95%;
+   }
+
+  }
