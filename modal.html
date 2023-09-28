@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/style.css" title="style">
+<link rel="stylesheet" type="text/css" href="css/small.css" title="style">
+<link rel="stylesheet" type="text/css" href="css/medium.css" title="style">
+<link rel="icon" type="image/png" href="images/icon.png">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="scripts/menu.js"></script> 
+<script type="text/javascript" src="scripts/loader.js"></script>   
+    <title>Ndiyohiyo|Repair</title>
+<style>
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: rgb(255, 120, 10);
+  padding: 10px 0;
+  height: 150px;
+}
+
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+        <div class="menu" id="navbar">
+          <div class="logo"> </div>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contacts.html">Contacts</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <h1>NDIYO HIYO AUTO GARAGE</h1>
+        <div class="content">
+          <h3> We offer auto repair services such as:</h3>
+          <div id="services">
+            <a href="#mech-repair"><li>1. Mechanical repair</li></a>
+            <a href="#elec-repair"><li>2.Electrical repair</li></a>
+            <a href="#body-repair"><li>3. Body repair</li></a>
+          </div><br>
+          <div class="bio">
+    <h3>Mechanical Repairs</h3>
+    <p><em>Our mission is and will always be to put all business on the global map and give them a competitive edge in the market.<br>
+      This will be made possible by our catalogue of services in <strong>Web development, Graphic design and advertising</strong> which we will enable
+      your business become more visible to customers around you as well as online market place.<br>
+      We also have a strong passion for building which includes building your business brand to international standards so that you 
+      can stand out among a crowd of businesses in your market.</em><br>
+    <img class="myImages" id="myImg" src="images/garage/IMG_20221103_171127_164.jpg" width="200" >
+    <img class="myImages" id="myImg" src="images/garage/IMG_20221109_104005_090.jpg" width="200" >
+    <img class="myImages" id="myImg" src="images/garage/IMG_20221102_121721_003.jpg" width="200">
+    <img class="myImages" id="myImg" src="images/garage/IMG_20221212_103004_010.jpg" width="200">
+
+</div><br>
+<div class="bio">
+    <h3>Electrical Repairs</h3>
+    <p><em>Our mission is and will always be to put all business on the global map and give them a competitive edge in the market.<br>
+      This will be made possible by our catalogue of services in <strong>Web development, Graphic design and advertising</strong> which we will enable
+      your business become more visible to customers around you as well as online market place.<br>
+      We also have a strong passion for building which includes building your business brand to international standards so that you 
+      can stand out among a crowd of businesses in your market.</em><br>
+      <img class="myImages" id="myImg" src="images/garage/IMG_20221103_171127_164.jpg" width="200" >
+      <img class="myImages" id="myImg" src="images/garage/IMG_20221109_104005_090.jpg" width="200" >
+      <img class="myImages" id="myImg" src="images/garage/IMG_20221110_105911_102.jpg" width="200">
+      <img class="myImages" id="myImg" src="images/garage/IMG_20221125_143427_443.jpg" width="200">
+
+</div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+                // create references to the modal...
+                var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>

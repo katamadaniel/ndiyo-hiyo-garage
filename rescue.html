@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" title="style">
+        <link rel="stylesheet" type="text/css" href="css/small.css" title="style">
+        <link rel="stylesheet" type="text/css" href="css/medium.css" title="style">
+        <link rel="icon" type="image/png" href="images/icon.png">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="scripts/menu.js"></script> 
+        <script type="text/javascript" src="scripts/loader.js"></script>   
+            <title>Ndiyohiyo|Rescue</title>
+    </head>
+    <body>
+      <img src="images/logo.png" width="100">
+      <div class="menu" id="navbar">
+        <div class="logo"> </div>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contacts.html">Contacts</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+                <h1>NDIYO HIYO AUTO GARAGE</h1>
+                <div class="content">
+                  <div id="staff">
+                    <div class="bio">
+                      <p>
+                        <h3>Towing & Rescue</h3>
+                        The towing mechanism is custom made at the garage. We can tow your vehicle directly from the accident scene if needed;
+                         just let the law enforcement officials at the scene know that you want to bring your car to us. 
+                         If your vehicle is out of our area, we’ll make all the necessary arrangements to have it brought to us by another towing company.
+    Ndiyo Hiyo Garage has a gas MIG welding and ARC welding machines. 
+    These ensure that all welding needs are catered for in-house including fabrication of sump guards for all vehicles.                            
+                      </p><br>
+                    <img class="myImages" id="myImg" src="images/garage/rescue/IMG_20221102_113001_940.jpg" width = 200px >
+                    <img class="myImages" id="myImg" src="images/garage/rescue/IMG_20230117_163451_166.jpg" width = 200px >
+                    <img class="myImages" id="myImg" src="images/garage/rescue/IMG_20230117_163800_042.jpg" width = 200px >
+                  </div>
+              </div><br>
+
+                <div id="myModal" class="modal">
+                  <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                      <div id="caption"></div>
+                     </div>
+                </div>
+            </div>
+            <div id="footer">
+              <div class="row">
+                <div id="col-sm-4">P.O BOX 33944-00600, NAIROBI</div>
+                <div id="col-sm-4">Along Mirema drive. Opposite  Mirema school</div>
+                <div id="col-sm-4">Call us: 0733750265 | 0722847071 | 0720520911</div>
+                
+              </div>
+              <div id="row">
+                <footer> &copy;2023</footer>
+              </div>
+              <div class="loader-wrapper"><div class="center">
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+                <div class="wave"></div>
+              </div>
+              </div>
+              <script>
+                // create references to the modal...
+var modal = document.getElementById('myModal');
+// to all images -- note I'm using a class!
+var images = document.getElementsByClassName('myImages');
+// the image in the modal
+var modalImg = document.getElementById("img01");
+// and the caption in the modal
+var captionText = document.getElementById("caption");
+
+// Go through all of the images with our custom class
+for (var i = 0; i < images.length; i++) {
+  var img = images[i];
+  // and attach our click listener for this image.
+  img.onclick = function(evt) {
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+}
+var modal = document.getElementById('myModal');
+modal.addEventListener('click',function(){
+this.style.display="none";
+})
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+              </script>
+    </body>
+</html>
